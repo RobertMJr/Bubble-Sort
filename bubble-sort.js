@@ -24,7 +24,7 @@ function bubbleSort(arr) {
 
 function bubbleSortBetter(arr) {
 	for (let i = arr.length; i > 0; i--) {
-		// Now that i is equal the arr length
+		// Now that i is equal to the arr length
 		// You can define j based on i
 		// This ensures no useless comparissons between values that were already sorted
 		for (let j = 0; j < i - 1; j++) {
@@ -43,9 +43,6 @@ function bubbleSortBetterOptimized(arr) {
 	let noSwaps;
 	for (let i = arr.length; i > 0; i--) {
 		noSwaps = true;
-		// Now that i is equal the arr length
-		// You can define j based on i
-		// This ensures no useless comparissons between values that were already sorted
 		for (let j = 0; j < i - 1; j++) {
 			if (arr[j] > arr[j + 1]) {
 				// SWAP
@@ -61,6 +58,4 @@ function bubbleSortBetterOptimized(arr) {
 console.log(bubbleSort([ 8, 1, 2, 3, 4, 5, 6, 7 ]));
 console.log(bubbleSortBetter([ 8, 1, 2, 3, 4, 5, 6, 7 ]));
 console.log(bubbleSortBetterOptimized([ 8, 1, 2, 3, 4, 5, 6, 7 ]));
-// In oposite direction the noSwap method is not as usefull
-// Would need to also loop differently for this to work well on the below almost sorted array
 console.log(bubbleSortBetterOptimized([ 2, 3, 4, 5, 6, 7, 8, 1 ]));
